@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "name": "socks",
+        "imgUrl": "./public/images/clothes/socks.png"
+    },
+    {
+        "id": 2,
+        "name": "underwear",
+        "imgUrl": "./public/images/clothes/underwear.png"
+    },
+    {
+        "id": 3,
+        "name": "bra",
+        "imgUrl": "./public/images/clothes/bra.png"
+    },
+    {
+        "id": 4,
+        "name": "pyjamas",
+        "imgUrl": "./public/images/clothes/pyjamas.png"
+    },
+    {
+        "id": 5,
+        "name": "swimwear",
+        "imgUrl": "./public/images/clothes/swimwear.png"
+    },
+    {
+        "id": 6,
+        "name": "tights",
+        "imgUrl": "./public/images/clothes/tights.png"
+    },
+    {
+        "id": 7,
+        "name": "shorts",
+        "imgUrl": "./public/images/clothes/shorts.png"
+    },
+    {
+        "id": 8,
+        "name": "T-shirts",
+        "imgUrl": "./public/images/clothes/tshirts.png"
+    },
+    {
+        "id": 9,
+        "name": "jeans",
+        "imgUrl": "./public/images/clothes/jeans.png"
+    },
+    {
+        "id": 10,
+        "name": "dress",
+        "imgUrl": "./public/images/clothes/dress.png"
+    },
+    {
+        "id": 11,
+        "name": "skirt",
+        "imgUrl": "./public/images/clothes/skirt.png"
+    },
+    {
+        "id": 12,
+        "name": "sweatshirt",
+        "imgUrl": "./public/images/clothes/sweatshirt.png"
+    },
+    {
+        "id": 13,
+        "name": "jumper",
+        "imgUrl": "./public/images/clothes/jumper.png"
+    },
+    {
+        "id": 14,
+        "name": "beanie",
+        "imgUrl": "./public/images/clothes/beanie.png"
+    },
+    {
+        "id": 15,
+        "name": "trousers",
+        "imgUrl": "./public/images/clothes/trousers.png"
+    },
+    {
+        "id": 16,
+        "name": "jacket",
+        "imgUrl": "./public/images/clothes/jacket.png"
+    },
+    {
+        "id": 17,
+        "name": "suit",
+        "imgUrl": "./public/images/clothes/suit.png"
+    }
+]
