@@ -1,5 +1,6 @@
 import { useContext, createContext, ReactNode, useState } from "react";
-
+import { InsideBackpack } from "./../components/InsideBackpack.tsx"
+import { useLocalStorage } from "../hooks/useLocalStorage.ts";
 
 type PackingListProviderProps = {
     children: ReactNode
@@ -11,6 +12,7 @@ type PackingListContext = {
     getNumberOfItems: (id: number) => number
     increaseNumberOfItems: (id: number) => void
     decreaseNumberOfItems: (id: number) => void
+    removeFormBagpack: (id: number) => void
     numberItemsInBackpack: number
     selectedItems: SelectedItem[]
 }
@@ -29,7 +31,7 @@ export function usePackingList() {
 export function PackingListProvider( { children }:PackingListProviderProps ){
 
     const [isEdited, setIsEdited] = useState(false);
-    const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([]);
+    const [selectedItems, setSelectedItems] = useLocalStorage<SelectedItem[]>("bagpack-content", []);
     const numberItemsInBackpack = selectedItems.reduce((quantity, item) => item.quantity + quantity, 0)
 
     const editPackingList = () => setIsEdited(true)
@@ -72,6 +74,12 @@ export function PackingListProvider( { children }:PackingListProviderProps ){
         })
     }
 
+    function removeFormBagpack(id: number){
+        setSelectedItems(chosenItems =>{
+            return chosenItems.filter(item => item.id !== id)
+        })
+    }
+
     return (
         <PackingListContext.Provider 
             value={{ 
@@ -79,12 +87,14 @@ export function PackingListProvider( { children }:PackingListProviderProps ){
                 increaseNumberOfItems, 
                 decreaseNumberOfItems, 
                 editPackingList,
-                closePackingList, 
+                closePackingList,
+                removeFormBagpack, 
                 selectedItems, 
                 numberItemsInBackpack
             }}
         >
             {children}
+            <InsideBackpack isEdited={isEdited} />    
         </PackingListContext.Provider>
     )
 }
